@@ -1,0 +1,260 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  /* AfriBenki Brand Colors */
+  --primary-navy: #001F3F;
+  --secondary-green: #00A676;
+  --accent-gold: #F4C430;
+  --bg-off-white: #F8F9FA;
+  --bg-light-gray: #E9ECEF;
+  --text-charcoal: #2C3E50;
+  --text-white: #FFFFFF;
+  --text-muted-green: #28A745;
+  --error-red: #DC3545;
+  
+  /* Semantic tokens */
+  --background: #F8F9FA;
+  --foreground: #2C3E50;
+  --card: #ffffff;
+  --card-foreground: #2C3E50;
+  --popover: #ffffff;
+  --popover-foreground: #2C3E50;
+  --primary: #001F3F;
+  --primary-foreground: #ffffff;
+  --secondary: #E9ECEF;
+  --secondary-foreground: #001F3F;
+  --muted: #F8F9FA;
+  --muted-foreground: #6c757d;
+  --accent: #00A676;
+  --accent-foreground: #ffffff;
+  --destructive: #DC3545;
+  --destructive-foreground: #ffffff;
+  --success: #00A676;
+  --success-foreground: #ffffff;
+  --warning: #F4C430;
+  --warning-foreground: #001F3F;
+  --border: #dee2e6;
+  --input: transparent;
+  --input-background: #F8F9FA;
+  --switch-background: #ced4da;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: #00A676;
+  --chart-1: #00A676;
+  --chart-2: #001F3F;
+  --chart-3: #F4C430;
+  --chart-4: #28A745;
+  --chart-5: #DC3545;
+  --radius: 1rem;
+  --sidebar: #F8F9FA;
+  --sidebar-foreground: #2C3E50;
+  --sidebar-primary: #001F3F;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #E9ECEF;
+  --sidebar-accent-foreground: #001F3F;
+  --sidebar-border: #dee2e6;
+  --sidebar-ring: #00A676;
+}
+
+.dark {
+  --background: #1a1a1a;
+  --foreground: #F8F9FA;
+  --card: #2d2d2d;
+  --card-foreground: #F8F9FA;
+  --popover: #2d2d2d;
+  --popover-foreground: #F8F9FA;
+  --primary: #34495E;
+  --primary-foreground: #ffffff;
+  --secondary: #3a3a3a;
+  --secondary-foreground: #F8F9FA;
+  --muted: #2d2d2d;
+  --muted-foreground: #adb5bd;
+  --accent: #27AE60;
+  --accent-foreground: #ffffff;
+  --destructive: #DC3545;
+  --destructive-foreground: #ffffff;
+  --success: #27AE60;
+  --success-foreground: #ffffff;
+  --warning: #F4C430;
+  --warning-foreground: #1a1a1a;
+  --border: #404040;
+  --input: transparent;
+  --input-background: #2d2d2d;
+  --switch-background: #495057;
+  --ring: #27AE60;
+  --chart-1: #27AE60;
+  --chart-2: #34495E;
+  --chart-3: #F4C430;
+  --chart-4: #28A745;
+  --chart-5: #DC3545;
+  --sidebar: #2d2d2d;
+  --sidebar-foreground: #F8F9FA;
+  --sidebar-primary: #34495E;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #3a3a3a;
+  --sidebar-accent-foreground: #F8F9FA;
+  --sidebar-border: #404040;
+  --sidebar-ring: #27AE60;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/**
+ * Base typography. This is not applied to elements which have an ancestor with a Tailwind text class.
+ */
+@layer base {
+  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+    h1 {
+      font-size: var(--text-2xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h2 {
+      font-size: var(--text-xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h3 {
+      font-size: var(--text-lg);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h4 {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    p {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+
+    label {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    button {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    input {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+  }
+}
+
+html {
+  font-size: var(--font-size);
+}
+
+/* AfriBenki Brand Gradients */
+@layer utilities {
+  .bg-gradient-afribenki {
+    background: linear-gradient(135deg, #001F3F 0%, #00A676 100%);
+  }
+  
+  .bg-gradient-afribenki-subtle {
+    background: linear-gradient(135deg, rgba(0, 31, 63, 0.05) 0%, rgba(0, 166, 118, 0.05) 100%);
+  }
+  
+  /* Mobile Safe Area Support */
+  .safe-area-inset-top {
+    padding-top: max(1rem, env(safe-area-inset-top));
+  }
+  
+  .safe-area-inset-bottom {
+    padding-bottom: max(1rem, env(safe-area-inset-bottom));
+  }
+  
+  /* Touch-friendly tap targets */
+  .touch-target {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Performance optimizations for low bandwidth */
+  .will-change-transform {
+    will-change: transform;
+  }
+  
+  .gpu-accelerated {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+  }
+}
+
+/* Reduce animations on slow connections */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

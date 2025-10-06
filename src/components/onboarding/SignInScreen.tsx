@@ -192,11 +192,11 @@ export function SignInScreen() {
           </Button>
         </form>
 
-        <div className="mt-6 text-center">
+                <div className="mt-6 text-center">
           <p className="text-sm text-muted-foreground">
             Don't have an account?{' '}
             <button
-              onClick={() => setCurrentScreen('country-detection')}
+              onClick={() => setCurrentScreen('signup')}
               className="text-primary hover:underline"
             >
               Sign Up

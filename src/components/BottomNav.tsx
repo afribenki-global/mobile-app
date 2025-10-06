@@ -1,5 +1,5 @@
 import { memo } from 'react';
-import { Home, PiggyBank, TrendingUp, Compass, Settings } from 'lucide-react';
+import { Home, PiggyBank, TrendingUp, Compass, Wallet } from 'lucide-react';
 import { useApp } from './AppContext';
 import { motion } from 'motion/react';
 
@@ -11,7 +11,7 @@ export const BottomNav = memo(function BottomNav() {
     { id: 'save', icon: PiggyBank, label: t('save') },
     { id: 'invest', icon: TrendingUp, label: t('invest') },
     { id: 'explore', icon: Compass, label: t('explore') },
-    { id: 'settings', icon: Settings, label: t('settings') },
+    { id: 'wallet', icon: Wallet, label: t('wallet') },
   ];
 
   return (

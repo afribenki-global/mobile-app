@@ -43,7 +43,7 @@ export function ActivityProvider({ children }: { children: ReactNode }) {
     },
   ]);
 
-  const addActivity = (activity: Omit<Activity, 'id'>) => {
+  const addActivity = (activity: Omit<Activity, 'id' | 'timestamp'>) => {
     const iconMap = {
       savings: '💰',
       investment: '📈',
@@ -57,7 +57,7 @@ export function ActivityProvider({ children }: { children: ReactNode }) {
     const newActivity: Activity = {
       ...activity,
       id: Date.now().toString(),
-      timestamp: activity.timestamp || new Date(),
+      timestamp: new Date(),
       status: activity.status || 'completed',
       icon: activity.icon || iconMap[activity.type] || '📋',
     };

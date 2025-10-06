@@ -54,6 +54,9 @@ import { WithdrawScreen } from './components/screens/WithdrawScreen';
 import { NewInvestmentScreen } from './components/screens/NewInvestmentScreen';
 import { TransactionHistoryScreen } from './components/screens/TransactionHistoryScreen';
 import { CryptoInvestScreen } from './components/screens/CryptoInvestScreen';
+import { StashSendScreen } from './components/screens/StashSendScreen';
+import { StashReceiveScreen } from './components/screens/StashReceiveScreen';
+import { StashQRScreen } from './components/screens/StashQRScreen';
 import { OnboardingBanner } from './components/OnboardingBanner';
 import { AIChat } from './components/AIChat';
 import { Toaster } from './components/ui/sonner';
@@ -106,6 +109,26 @@ function AppContent() {
     };
     
     initializeApp();
+    
+    // Detect country in background (no UI screen)
+    const detectCountryInBackground = async () => {
+      // Try to get user's location silently
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          (position) => {
+            // In production, use position.coords to determine country via reverse geocoding API
+            // For now, we'll use a simple IP-based detection or default to Nigeria
+            console.log('Location detected:', position.coords);
+          },
+          (error) => {
+            console.log('Location detection failed, using default:', error);
+          },
+          { timeout: 5000, enableHighAccuracy: false }
+        );
+      }
+    };
+    
+    detectCountryInBackground();
   }, [setUser, setIsOnboarded]);
 
   if (showSplash) {
@@ -117,8 +140,6 @@ function AppContent() {
     switch (currentScreen) {
       case 'welcome':
         return <WelcomeScreen />;
-      case 'country-detection':
-        return <CountryDetection />;
       case 'signup':
         return <SignUpScreen />;
       case 'signin':
@@ -162,6 +183,15 @@ function AppContent() {
       break;
     case 'wallet':
       mainScreen = <WalletScreen />;
+      break;
+    case 'stash-send':
+      mainScreen = <StashSendScreen />;
+      break;
+    case 'stash-receive':
+      mainScreen = <StashReceiveScreen />;
+      break;
+    case 'stash-qr':
+      mainScreen = <StashQRScreen />;
       break;
     case 'circles':
       mainScreen = <CirclesScreen />;

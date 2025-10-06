@@ -68,12 +68,12 @@ export function WelcomeScreen() {
         transition={{ delay: 0.8, duration: 0.5 }}
         className="p-6 space-y-3 relative z-10 safe-area-inset-bottom"
       >
-        <Button
-          onClick={() => setCurrentScreen('country-detection')}
-          className="w-full h-12 bg-white text-primary hover:bg-white/90 rounded-xl font-medium"
-        >
-          <span className="text-primary">{t('getStarted')}</span>
-        </Button>
+          <Button
+            onClick={() => setCurrentScreen('signup')}
+            className="w-full h-12 bg-white text-primary hover:bg-white/90 rounded-xl font-medium"
+          >
+            <span className="text-primary">{t('getStarted')}</span>
+          </Button>
         <Button
           onClick={() => setCurrentScreen('signin')}
           className="w-full h-12 bg-white/20 backdrop-blur-sm border-2 border-white/40 text-white hover:bg-white/30 hover:border-white/60 rounded-xl font-medium shadow-lg transition-all"

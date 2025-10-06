@@ -1,4 +1,4 @@
-import { Bell, ChevronLeft } from 'lucide-react';
+import { Bell, ChevronLeft, User } from 'lucide-react';
 import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
 import { useApp } from './AppContext';
 import { Badge } from './ui/badge';
@@ -43,7 +43,13 @@ export function TopBar({ title, showBack, onBack, showBackButton, onBackClick }:
             </div>
           </div>
         )}
-        <div className="relative">
+        <div className="flex items-center gap-2">
+          <button 
+            onClick={() => setCurrentScreen('settings')}
+            className="p-2 hover:bg-primary-foreground/10 rounded-full transition-colors"
+          >
+            <User className="w-6 h-6" />
+          </button>
           <button 
             onClick={() => setCurrentScreen('notifications')}
             className="p-2 hover:bg-primary-foreground/10 rounded-full transition-colors relative"

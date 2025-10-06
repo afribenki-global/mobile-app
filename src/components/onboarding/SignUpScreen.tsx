@@ -262,17 +262,18 @@ export function SignUpScreen() {
             </div>
           </div>
 
-          <div className="flex items-start gap-2">
-            <Checkbox
-              id="terms"
-              checked={agreedToTerms}
-              onCheckedChange={(checked) => setAgreedToTerms(checked as boolean)}
-              className="mt-1"
-            />
-            <label htmlFor="terms" className="text-sm text-muted-foreground">
-              I agree to the Terms of Service and Privacy Policy. I understand this app is not for collecting PII or securing sensitive data beyond demo purposes.
-            </label>
-          </div>
+        <div className="flex items-start gap-2">
+  <Checkbox
+    id="terms"
+    checked={agreedToTerms}
+    onCheckedChange={setAgreedToTerms}
+    className="mt-1"
+  />
+  <label htmlFor="terms" className="text-sm text-muted-foreground">
+    I agree to the Terms of Service and Privacy Policy. I understand this app is not for collecting PII or securing sensitive data beyond demo purposes.
+  </label>
+</div>
+
 
           <Button
             type="submit"

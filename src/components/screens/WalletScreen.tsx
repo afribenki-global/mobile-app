@@ -44,15 +44,24 @@ export function WalletScreen() {
           </div>
 
           <div className="grid grid-cols-4 gap-2">
-            <button className="flex flex-col items-center gap-2 bg-white/10 backdrop-blur-sm rounded-xl p-3 hover:bg-white/20 transition-colors">
+            <button 
+              onClick={() => setCurrentScreen('stash-send')}
+              className="flex flex-col items-center gap-2 bg-white/10 backdrop-blur-sm rounded-xl p-3 hover:bg-white/20 transition-colors"
+            >
               <Send className="w-6 h-6" />
               <span className="text-xs">Send</span>
             </button>
-            <button className="flex flex-col items-center gap-2 bg-white/10 backdrop-blur-sm rounded-xl p-3 hover:bg-white/20 transition-colors">
+            <button 
+              onClick={() => setCurrentScreen('stash-receive')}
+              className="flex flex-col items-center gap-2 bg-white/10 backdrop-blur-sm rounded-xl p-3 hover:bg-white/20 transition-colors"
+            >
               <Download className="w-6 h-6" />
               <span className="text-xs">Receive</span>
             </button>
-            <button className="flex flex-col items-center gap-2 bg-white/10 backdrop-blur-sm rounded-xl p-3 hover:bg-white/20 transition-colors">
+            <button 
+              onClick={() => setCurrentScreen('stash-qr')}
+              className="flex flex-col items-center gap-2 bg-white/10 backdrop-blur-sm rounded-xl p-3 hover:bg-white/20 transition-colors"
+            >
               <QrCode className="w-6 h-6" />
               <span className="text-xs">QR Code</span>
             </button>
@@ -74,7 +83,10 @@ export function WalletScreen() {
               placeholder="Enter @username or phone"
               className="h-12 rounded-xl"
             />
-            <Button className="h-12 px-6 bg-primary hover:bg-primary/90 rounded-xl">
+            <Button 
+              onClick={() => setCurrentScreen('stash-send')}
+              className="h-12 px-6 bg-primary hover:bg-primary/90 rounded-xl"
+            >
               Send
             </Button>
           </div>
@@ -143,7 +155,12 @@ export function WalletScreen() {
               <p className="text-sm text-muted-foreground mb-3">
                 Share your QR code or tag to receive money instantly from anyone
               </p>
-              <Button variant="outline" size="sm" className="border-success text-success hover:bg-success hover:text-white">
+              <Button 
+                onClick={() => setCurrentScreen('stash-qr')}
+                variant="outline" 
+                size="sm" 
+                className="border-success text-success hover:bg-success hover:text-white"
+              >
                 Show QR Code
               </Button>
             </div>

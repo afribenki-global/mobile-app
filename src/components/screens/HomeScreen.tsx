@@ -5,7 +5,7 @@ import { TopBar } from '../TopBar';
 import { BottomNav } from '../BottomNav';
 import { Card } from '../ui/card';
 import { Button } from '../ui/button';
-import { ArrowUpRight, ArrowDownRight, PiggyBank, TrendingUp, Users, Eye, EyeOff, Sparkles, Clock, Settings } from 'lucide-react';
+import { ArrowUpRight, ArrowDownRight, PiggyBank, TrendingUp, Users, Eye, EyeOff, Sparkles, Clock, Wallet } from 'lucide-react';
 import { LineChart, Line, AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import { useState } from 'react';
 
@@ -29,7 +29,7 @@ export function HomeScreen() {
     { id: 'savings-plan', icon: PiggyBank, label: 'Create Plan', color: 'bg-primary', screen: 'create-savings-plan' },
     { id: 'invest', icon: TrendingUp, label: 'Invest', color: 'bg-accent', screen: 'mutual-funds' },
     { id: 'circles', icon: Users, label: 'Circles', color: 'bg-purple-500', screen: 'circles' },
-    { id: 'settings', icon: Settings, label: 'Settings', color: 'bg-warning', screen: 'settings' },
+    { id: 'wallet', icon: Wallet, label: 'Wallet', color: 'bg-warning', screen: 'wallet' },
   ];
 
   const recentTransactions = [

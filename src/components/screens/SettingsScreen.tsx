@@ -56,7 +56,7 @@ export function SettingsScreen() {
 
   return (
     <div className="min-h-screen bg-muted pb-20">
-      <TopBar title={t('settings')} />
+      <TopBar title={t('profile')} />
       
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -147,7 +147,7 @@ export function SettingsScreen() {
         {/* App Info */}
         <Card className="p-5 text-center">
           <p className="text-sm text-muted-foreground mb-2">AfriBenki App Version</p>
-          <p className="font-medium text-foreground mb-4">2.5.0</p>
+          <p className="font-medium text-foreground mb-4">2.6.0</p>
           <div className="flex items-center justify-center gap-4 text-sm text-primary">
             <button className="hover:underline">Rate Us</button>
             <span className="text-muted-foreground">•</span>

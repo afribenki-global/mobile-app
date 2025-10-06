@@ -1,7 +1,7 @@
 
   # AfriBenki Savings Investment App
 
-  This is a code bundle for AfriBenki Savings Investment App. The original project is available at https://www.figma.com/design/R8LaeR1tbLhYSzzWEJMwhE/AfriBenki-Savings-Investment-App.
+  This is a code bundle for AfriBenki Savings & Investment Mobile App. 
 
   ## Running the code
 
